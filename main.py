@@ -1,5 +1,5 @@
 import RPi.GPIO as GPIO
-import motor.motor as motor
+from motor import motor
 
 GPIO.setmode(GPIO.BCM)
 
