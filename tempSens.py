@@ -6,5 +6,12 @@ def get() :
     f = open(sensor, 'r')
     lines = f.readlines()
     f.close()
-    return lines
+
+    pos = lines[1].find('t=')
+    if pos != -1:
+        temp_string = lines[1][pos+2:]
+        temp_c = float(temp_string) / 1000.0
+        return temp_c
+    else:
+        return 0
 
