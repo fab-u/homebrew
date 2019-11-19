@@ -7,7 +7,7 @@ Software to control an automated brewery realized with raspberry pi and python.
 + Control stirring motor
 + Regulate temperature
 + Save and load brewing programs
-+ (Show brewing process on website)
++ (Show brewing process on [website](http://www.04-bier.ch))
 + (Controlable via app (Cross platform))
 
 ## Hardware requirements
