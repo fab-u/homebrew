@@ -1,17 +1,17 @@
-# HomeBrew controll 
+# HomeBrew
 
 ## Description
-Software to controll an automated brewery realized with raspberry pi and python.
+Software to control an automated brewery realized with raspberry pi and python.
 
 ## Features
-+ Controll stirring motor
++ Control stirring motor
 + Regulate temperature
 + Save and load brewing programs
-+ (Show brewing proces on website)
-+ (Controllable via app (Cross platform))
++ (Show brewing process on website)
++ (Controlable via app (Cross platform))
 
 ## Hardware requirements
 + Raspberry pi with WLAN access
 + Stirring motor
 + Heat plate
-+ Temperature sensor (One-Wire connected)
++ Temperature sensor (One-Wire connection)
