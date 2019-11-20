@@ -1,3 +1,5 @@
+import RPi.GPIO as GPIO
+
 tempSet = 0
 
 gpio = 13
