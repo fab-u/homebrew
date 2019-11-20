@@ -13,9 +13,3 @@ import tempControll
 import tempSens
 
 #initialize system
-
-motor.start(50)
-
-
-#m = motor(2000)
-#m.start(50)
