@@ -1,17 +1,16 @@
 tempSet = 0
-i = 1
+
+gpio = 13
+GPIO.setup(gpio, GPIO.OUT)
 
 def setTemp(temp):
     tempSet = temp
 
 def update(tempActual):
     if(tempActual>tempSet):
-        i=0
-        #Heat off
+        GPIO.output(gpio, GPIO.HIGH)
     else:
-        i=1
-        #Heat on
+        GPIO.output(gpio, GPIO.LOW)
 
 def off():
-    i=2
-    #Heat off
+    GPIO.output(gpio, GPIO.LOW)

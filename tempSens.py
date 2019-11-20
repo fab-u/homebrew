@@ -2,6 +2,7 @@ import os, time
 
 sensor = '/sys/bus/w1/devices/28-031868c5fcff/w1_slave'
 
+#Returns temperature values from sensor as float
 def get() :
     f = open(sensor, 'r')
     lines = f.readlines()
