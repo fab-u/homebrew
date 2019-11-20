@@ -3,6 +3,7 @@ import RPi.GPIO as GPIO
 gpio = 12
 frequencie = 2000 
 
+GPIO.setup(gpio, GPIO.OUT)
 pwm = GPIO.PWM(gpio, frequencie)
 
 def start(speed):
