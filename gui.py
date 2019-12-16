@@ -196,6 +196,11 @@ class Ui_MainWindow(object):
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Hier können Informationen angezeigt werden</p></body></html>"))
         self.menu04_Homebrew.setTitle(_translate("MainWindow", "04 Homebrew"))
 
+    def button_click(self):
+        # shost is a QString object
+        shost = self.le.text()
+        print(shost)
+
 
 def load():
     import sys
