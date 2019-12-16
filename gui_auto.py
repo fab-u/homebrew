@@ -169,6 +169,7 @@ class Ui_MainWindow(object):
 def load():
     import sys
     app = QtWidgets.QApplication(sys.argv)
+    app.setStyle('Windows')
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()
     ui.setupUi(MainWindow)
