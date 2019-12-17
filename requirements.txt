@@ -1,0 +1,6 @@
+System Requirements:
+-Python 3 (recomendet Python 3.7 or newer)
+
+Python Packages:
+-Requests
+-PyQt5
