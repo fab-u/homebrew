@@ -1,17 +1,16 @@
 # HomeBrew
 
-## Description
-Software to control an automated brewery realized with Raspberry Pi and Python.
+## Beschreibung
+Software zur steuerung einer Brauanlage.
+Misst tie Temperatur, regelt die Heizplatte und steuert die Rührgescwindigkeit des Motors
 
-## Features
-+ Control stirring motor
-+ Regulate temperature
-+ Save and load brewing programs
-+ (Show brewing process on [website](http://www.04-bier.ch))
-+ (Controlable via iOS app)
+## Software Komponenten
+### sync.sh
+Bash script um den neusten sourcecode von GitHub zu clonen und den alten (falls vorhanden) zu löschen.
 
-## Hardware requirements
-+ Raspberry Pi with WLAN access
-+ Stirring motor
-+ Heat plate
-+ Temperature sensor (One-Wire connection)
+### config.sh
+Dieses script muss einmalig ausgeführt werden.
+Es instaliert alle nötigen Softwarekomponenten und Python libraries
+
+### homebrew (ordner)
+Hier befinden sich die verschiedenen Softwarekomponenten der Brausteuerung
