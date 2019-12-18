@@ -12,5 +12,5 @@ Bash script um den neusten sourcecode von GitHub zu clonen und den alten (falls 
 Dieses script muss einmalig ausgeführt werden.
 Es instaliert alle nötigen Softwarekomponenten und Python libraries
 
-### homebrew (ordner)
+### homebrew (Ordner)
 Hier befinden sich die verschiedenen Softwarekomponenten der Brausteuerung
