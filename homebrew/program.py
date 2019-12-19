@@ -1,12 +1,14 @@
 import time
 import step
 import motor
-import tempControll
+import tempControl
 
 steps = []
 currentStep = 0
 currentTime = 0
 startTime = 0
+
+isRunning = False
 
 def start():
   startTime = time.time()
@@ -19,6 +21,6 @@ def update():
     _initStep(steps[currentStep])
 
 def _initStep(step):
-    tempControll.setTemp(step.temp)
+    tempControl.setTemp(step.temp)
     motor.setSpeed(step.speed)
 
