@@ -95,6 +95,7 @@ class Ui_MainWindow(object):
     def start(self):
         if main.isOn:
             main.isOn = False
+            tempControl.off()
         else:
             main.isOn = True
 
