@@ -74,8 +74,6 @@ class Ui_MainWindow(object):
         self.button_start_manuell.setText(_translate("MainWindow", "Start/Stopp"))
         self.menumanuell.setTitle(_translate("MainWindow", "manuell"))
 
-
-#if __name__ == "__main__":
 def load():
     import sys
     app = QtWidgets.QApplication(sys.argv)
