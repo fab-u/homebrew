@@ -164,8 +164,6 @@ class Ui_MainWindow(object):
         self.button_manuelleeinstellungen.setText(_translate("MainWindow", "Manuelle Einstellungen"))
         self.menuManuell.setTitle(_translate("MainWindow", "Automatik"))
 
-
-#if __name__ == "__main__":
 def load():
     import sys
     app = QtWidgets.QApplication(sys.argv)
