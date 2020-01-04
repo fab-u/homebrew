@@ -1,6 +1,9 @@
 #raspi lib
 import RPi.GPIO as GPIO
 
+#std lib
+import threading
+
 #user lib
 import motor
 import gpio
@@ -9,19 +12,22 @@ import tempControl
 import tempSens
 import gui, gui_auto, gui_man
 
-#local variables
+#global variables
 isOn = False
+
+#local variables
 _isAuto = False
+_loopDelayTimer = 1.0
 
 #general GPIO Settings
 GPIO.cleanup()
 GPIO.setmode(GPIO.BCM)
 
-#initialize system
-gui.load(False) #load manual user interface
+#define methods
+def _mainLoop():
+    threading.Timer(_loopDelayTimer, _mainLoop).start()
+    print("test1")
 
-#main loop
-while True:
     if _isAuto:
         if isOn:
             program.update()
@@ -33,3 +39,9 @@ while True:
 def setMode(isAuto):
     _isAuto = isAuto
     gui.load(isAuto)
+
+
+#initialisation script
+_mainLoop() #start mainLoop
+gui.load(False) #load manual user interface
+
