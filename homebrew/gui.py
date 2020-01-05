@@ -1,11 +1,7 @@
 import sys
 import gui_auto
-<<<<<<< HEAD
-import gui_man
-=======
 import gui_man
 import param
->>>>>>> 32e59bd73b1861ac49f59c95d6a4c80b24f20944
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 app = QtWidgets.QApplication(sys.argv)
