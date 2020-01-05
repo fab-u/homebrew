@@ -21,12 +21,11 @@ isOn = False
 
 #local used variables
 _isAuto = False
-_loopDelayTimer = 1.0
+_loopDelayTimer = 2.0
 
 #define methods
 def _mainLoop():
     threading.Timer(_loopDelayTimer, _mainLoop).start()
-    print("test1")
 
     if _isAuto:
         if isOn:
@@ -40,8 +39,6 @@ def setMode(isAuto):
     _isAuto = isAuto
     gui.load(isAuto)
 
-
 #initialisation script
 _mainLoop() #start mainLoop
 gui.load(False) #load manual user interface
-
