@@ -6,7 +6,8 @@ hysteresis = 1 #hysteresis in °C
 _isOn = False
 
 gpio = 13 #Raspi GPIO pin 
-GPIO.setup(gpio, GPIO.OUT)
+def init():
+    GPIO.setup(gpio, GPIO.OUT)
 
 #Set Temperature 
 def setTemp(temp):
