@@ -17,4 +17,3 @@ def load(isAuto):
     param.ui = ui
     MainWindow.show()
     app.exec_()
-load(True)
