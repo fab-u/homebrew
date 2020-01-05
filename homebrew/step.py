@@ -1,6 +1,6 @@
 import time
 import motor
-import tempControll
+import tempControl
 
 class step():
   def __init__(self, time, heat, speed):
