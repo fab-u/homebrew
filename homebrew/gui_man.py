@@ -22,14 +22,14 @@ class Ui_MainWindow(object):
         self.slider_setgeschw = QtWidgets.QSlider(self.centralwidget)
         self.slider_setgeschw.setGeometry(QtCore.QRect(180, 65, 381, 81))
         self.slider_setgeschw.setOrientation(QtCore.Qt.Horizontal)
-        self.slider_setgeschw.setMaximum(100)
+        self.slider_setgeschw.setMaximum(10)
         self.slider_setgeschw.setObjectName("slider_setgeschw")
 
         self.slider_settemp = QtWidgets.QSlider(self.centralwidget)
         self.slider_settemp.setGeometry(QtCore.QRect(180, 170, 381, 81))
         self.slider_settemp.setOrientation(QtCore.Qt.Horizontal)
         self.slider_settemp.setObjectName("slider_settemp")
-        self.slider_settemp.setMaximum(10)
+        self.slider_settemp.setMaximum(100)
         self.slider_settemp.valueChanged.connect(self.setTemp)
 
         self.button_automatik = QtWidgets.QPushButton(self.centralwidget)
