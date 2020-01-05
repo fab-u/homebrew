@@ -6,6 +6,7 @@ GPIO.cleanup()
 GPIO.setmode(GPIO.BCM)
 
 #user lib
+import param
 import motor
 import gpio
 import program
@@ -19,27 +20,21 @@ import gui_man
 import threading
 
 #global variables
-isOn = False
 
 #local used variables
-_isAuto = False
 _loopDelayTimer = 2.0
 
 #define methods
 def _mainLoop():
     threading.Timer(_loopDelayTimer, _mainLoop).start()
 
-    if _isAuto:
-        if isOn:
+    if param.isAuto:
+        if param.isOn:
             program.update()
-    if(isOn):
+    if(param.isOn):
         tempControl.update(tempSens.get())
     else:
         tempControl.off()
-
-def setMode(isAuto):
-    _isAuto = isAuto
-    gui.load(isAuto)
 
 #initialisation script
 tempControl.init()

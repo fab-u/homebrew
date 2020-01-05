@@ -3,7 +3,6 @@ import gui_auto
 import gui_man
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-
 app = QtWidgets.QApplication(sys.argv)
 app.setStyle('Windows')
 MainWindow = QtWidgets.QMainWindow()
