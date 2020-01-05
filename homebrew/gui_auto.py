@@ -69,65 +69,86 @@ class Ui_MainWindow(object):
         self.label_show_step = QtWidgets.QLabel(self.centralwidget)
         self.label_show_step.setGeometry(QtCore.QRect(100, 250, 51, 16))
         self.label_show_step.setObjectName("label_show_step")
+
+
         self.lcd_show_step = QtWidgets.QLCDNumber(self.centralwidget)
         self.lcd_show_step.setGeometry(QtCore.QRect(100, 270, 101, 51))
         self.lcd_show_step.setObjectName("lcd_show_step")
+
         self.checkbox_start_stopp = QtWidgets.QCheckBox(self.centralwidget)
         self.checkbox_start_stopp.setGeometry(QtCore.QRect(30, 270, 71, 41))
         self.checkbox_start_stopp.setObjectName("checkbox_start_stopp")
+
         self.line = QtWidgets.QFrame(self.centralwidget)
         self.line.setGeometry(QtCore.QRect(0, 220, 800, 21))
         self.line.setFrameShape(QtWidgets.QFrame.HLine)
         self.line.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line.setObjectName("line")
+
         self.settime = QtWidgets.QTimeEdit(self.centralwidget)
         self.settime.setGeometry(QtCore.QRect(190, 160, 101, 51))
         self.settime.setObjectName("settime")
+
         self.label_timer = QtWidgets.QLabel(self.centralwidget)
         self.label_timer.setGeometry(QtCore.QRect(190, 210, 61, 16))
         self.label_timer.setObjectName("label_timer")
+
         self.button_save_settings = QtWidgets.QPushButton(self.centralwidget)
         self.button_save_settings.setGeometry(QtCore.QRect(320, 160, 81, 31))
         self.button_save_settings.setObjectName("button_save_settings")
+
         self.label_step = QtWidgets.QLabel(self.centralwidget)
         self.label_step.setGeometry(QtCore.QRect(200, 10, 31, 16))
         self.label_step.setObjectName("label_step")
+
         self.lcd_show_dauer = QtWidgets.QLCDNumber(self.centralwidget)
         self.lcd_show_dauer.setGeometry(QtCore.QRect(220, 270, 101, 51))
         self.lcd_show_dauer.setObjectName("lcd_show_dauer")
+
         self.label_show_dauer = QtWidgets.QLabel(self.centralwidget)
         self.label_show_dauer.setGeometry(QtCore.QRect(220, 250, 51, 16))
         self.label_show_dauer.setObjectName("label_show_dauer")
+
         self.lcd_show_solltemp = QtWidgets.QLCDNumber(self.centralwidget)
         self.lcd_show_solltemp.setGeometry(QtCore.QRect(570, 260, 81, 31))
         self.lcd_show_solltemp.setObjectName("lcd_show_solltemp")
+
         self.lcd_show_isttemp_2 = QtWidgets.QLCDNumber(self.centralwidget)
         self.lcd_show_isttemp_2.setGeometry(QtCore.QRect(570, 320, 81, 31))
         self.lcd_show_isttemp_2.setObjectName("lcd_show_isttemp_2")
+
         self.label_solltemp = QtWidgets.QLabel(self.centralwidget)
         self.label_solltemp.setGeometry(QtCore.QRect(570, 240, 71, 16))
         self.label_solltemp.setObjectName("label_solltemp")
+
         self.label_isttemp = QtWidgets.QLabel(self.centralwidget)
         self.label_isttemp.setGeometry(QtCore.QRect(570, 300, 61, 16))
         self.label_isttemp.setObjectName("label_isttemp")
+
         self.label_settemp = QtWidgets.QLabel(self.centralwidget)
         self.label_settemp.setGeometry(QtCore.QRect(90, 60, 51, 16))
         self.label_settemp.setObjectName("label_settemp")
+
         self.label_setgeschw = QtWidgets.QLabel(self.centralwidget)
         self.label_setgeschw.setGeometry(QtCore.QRect(90, 110, 51, 16))
         self.label_setgeschw.setObjectName("label_setgeschw")
+
         self.infobox_settings = QtWidgets.QTextEdit(self.centralwidget)
         self.infobox_settings.setGeometry(QtCore.QRect(570, 20, 201, 151))
         self.infobox_settings.setObjectName("infobox_settings")
+
         self.label_show_infobox = QtWidgets.QLabel(self.centralwidget)
         self.label_show_infobox.setGeometry(QtCore.QRect(350, 340, 51, 16))
         self.label_show_infobox.setObjectName("label_show_infobox")
+
         self.show_infobox = QtWidgets.QTextEdit(self.centralwidget)
         self.show_infobox.setGeometry(QtCore.QRect(350, 250, 181, 81))
         self.show_infobox.setObjectName("show_infobox")
+
         self.button_save_infobox = QtWidgets.QPushButton(self.centralwidget)
         self.button_save_infobox.setGeometry(QtCore.QRect(570, 180, 101, 31))
         self.button_save_infobox.setObjectName("button_save_infobox")
+
         self.comboBox_safedbier = QtWidgets.QComboBox(self.centralwidget)
         self.comboBox_safedbier.setGeometry(QtCore.QRect(10, 60, 53, 22))
 
@@ -234,6 +255,18 @@ class Ui_MainWindow(object):
 
     def speedsliderMoved(self):
         program.steps[index].speed = self.slider_setgeschw.value()
+    
+    def timeset(self):
+
+
+    def lcdshowStep(self):
+        
+    def lcdshowsollTemp(self):
+
+    def lcdshowDauer(self):
+
+    def lcdshowistTemp(self):
+
 
 def load():
     import sys
