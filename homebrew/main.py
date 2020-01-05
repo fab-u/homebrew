@@ -19,8 +19,6 @@ import gui_man
 #std lib
 import threading
 
-#global variables
-
 #local used variables
 _loopDelayTimer = 2.0
 
