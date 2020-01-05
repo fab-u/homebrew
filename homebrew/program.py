@@ -4,6 +4,10 @@ import motor
 import tempControl
 
 steps = []
+
+for i in range(5):
+  steps.append(step.step(0,0,0))
+
 currentStep = 0
 currentTime = 0
 startTime = 0
