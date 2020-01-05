@@ -1,9 +1,6 @@
 #raspi lib
 import RPi.GPIO as GPIO
 
-#std lib
-import threading
-
 #general GPIO Settings
 GPIO.cleanup()
 GPIO.setmode(GPIO.BCM)
@@ -15,6 +12,9 @@ import program
 import tempControl
 import tempSens
 import gui, gui_auto, gui_man
+
+#std lib
+import threading
 
 #global variables
 isOn = False
