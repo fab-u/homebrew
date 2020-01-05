@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 import tempSens
 import tempControl
 import motor
-#import main
+import param
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -93,14 +93,14 @@ class Ui_MainWindow(object):
         self.menumanuell.setTitle(_translate("MainWindow", "manuell"))
 
     def start(self):
-        if main.isOn:
-            main.isOn = False
+        if param.isOn:
+            param.isOn = False
             tempControl.off()
         else:
-            main.isOn = True
+            param.isOn = True
 
     def setAutomatic(self):
-        main.setMode(True)
+        param.setMode(True)
 
     def setTemp(self):
         tempControl.setTemp(self.slider_settemp.value())
