@@ -1,7 +1,7 @@
 import RPi.GPIO as GPIO
 
 gpio = 18
-frequencie = 200 
+frequencie = 20 
 
 GPIO.setup(gpio, GPIO.OUT)
 pwm = GPIO.PWM(gpio, frequencie)
