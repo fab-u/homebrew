@@ -40,5 +40,7 @@ def setMode(isAuto):
     gui.load(isAuto)
 
 #initialisation script
+tempControl.init()
+
 _mainLoop() #start mainLoop
 gui.load(False) #load manual user interface
