@@ -8,7 +8,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+import program, motor, tempControl, tempSens, main
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -184,20 +184,38 @@ class Ui_MainWindow(object):
         self.menuManuell.setTitle(_translate("MainWindow", "Automatik"))
 
     def setstep1(self):
-        self.pushButton.setStyleSheet("background-color: red")
-        
+        self.resetButtonColor()
+        self.button_Step1.setStyleSheet("background-color: red")
+        program.steps[1]
+
     def setstep2(self):
+        self.resetButtonColor()
+        self.button_Step1.setStyleSheet("background-color: red")
 
     def setstep3(self):
-    
+        self.resetButtonColor()
+        self.button_Step1.setStyleSheet("background-color: red")
+
     def setstep4(self):
+        self.resetButtonColor()
+        self.button_Step1.setStyleSheet("background-color: red")
+
     def setstep5(self):
+        self.resetButtonColor()
+        self.button_Step1.setStyleSheet("background-color: red")
 
     def safeSettings(self):
-        
+        self.button_Step1.setStyleSheet("background-color: red")
 
     def setMode(self):
         main.setMode(False)
+
+    def resetButtonColor(self):
+        self.button_Step1.setStyleSheet("background-color: grey")
+        self.button_Step2.setStyleSheet("background-color: grey")
+        self.button_Step3.setStyleSheet("background-color: grey")
+        self.button_Step4.setStyleSheet("background-color: grey")
+        self.button_Step5.setStyleSheet("background-color: grey")
 
 def load():
     import sys
