@@ -1,6 +1,7 @@
 import os, time
 
-sensor = '/sys/bus/w1/devices/28-031868c5fcff/w1_slave'
+#sensor = '/sys/bus/w1/devices/28-031868c5fcff/w1_slave'  old sensor
+sensor = '/sys/bus/w1/devices/28-03163386d7ff/w1_slave'
 
 #Returns temperature values from sensor as float
 def get() :
