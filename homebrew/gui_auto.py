@@ -8,11 +8,11 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-#import program
-#import motor
-#import tempControl
-#import tempSens
-#import mainß
+import program
+import motor
+import tempControl
+import tempSens
+import main
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -255,6 +255,8 @@ class Ui_MainWindow(object):
     def speedsliderMoved(self):
         program.steps[index].speed = self.slider_setgeschw.value()
     
+   # def timeRead(self):
+      #  program.steps[index].time = self.
 
 
 def load():
