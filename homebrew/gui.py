@@ -1,6 +1,6 @@
 import sys
 import gui_auto
-import gui_man
+#import gui_man
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 app = QtWidgets.QApplication(sys.argv)
@@ -15,3 +15,4 @@ def load(isAuto):
     ui.setupUi(MainWindow)
     MainWindow.show()
     app.exec_()
+load(True)

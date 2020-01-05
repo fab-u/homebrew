@@ -8,10 +8,10 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-import program
-import motor
-import tempControl
-import tempSens
+#import program
+#import motor
+#import tempControl
+#import tempSens
 #import mainß
 
 class Ui_MainWindow(object):
@@ -104,6 +104,7 @@ class Ui_MainWindow(object):
         self.lcd_show_dauer = QtWidgets.QLCDNumber(self.centralwidget)
         self.lcd_show_dauer.setGeometry(QtCore.QRect(220, 270, 101, 51))
         self.lcd_show_dauer.setObjectName("lcd_show_dauer")
+
 
         self.label_show_dauer = QtWidgets.QLabel(self.centralwidget)
         self.label_show_dauer.setGeometry(QtCore.QRect(220, 250, 51, 16))
@@ -221,24 +222,21 @@ class Ui_MainWindow(object):
 
     def setstep2(self):
         self.resetButtonColor()
-        self.button_Step1.setStyleSheet("background-color: red")
+        self.button_Step2.setStyleSheet("background-color: red")
         index = 1
 
     def setstep3(self):
         self.resetButtonColor()
-        self.button_Step1.setStyleSheet("background-color: red")
+        self.button_Step3.setStyleSheet("background-color: red")
         index = 2
 
     def setstep4(self):
         self.resetButtonColor()
-        self.button_Step1.setStyleSheet("background-color: red")
+        self.button_Step4.setStyleSheet("background-color: red")
 
     def setstep5(self):
         self.resetButtonColor()
-        self.button_Step1.setStyleSheet("background-color: red")
-
-    def safeSettings(self):
-        self.button_Step1.setStyleSheet("background-color: red")
+        self.button_Step5.setStyleSheet("background-color: red")   
 
     def setMode(self):
         main.setMode(False)
@@ -251,21 +249,12 @@ class Ui_MainWindow(object):
         self.button_Step5.setStyleSheet("background-color: grey")
 
     def tempsliderMoved(self):     #sliderwert in step speichern
-        program.steps[index].heat = self.slider_settemp.value()
+       # program.steps[index].heat = self.slider_settemp.value()
+        print(self.slider_settemp.value())
 
     def speedsliderMoved(self):
         program.steps[index].speed = self.slider_setgeschw.value()
     
-    def timeset(self):
-
-
-    def lcdshowStep(self):
-        
-    def lcdshowsollTemp(self):
-
-    def lcdshowDauer(self):
-
-    def lcdshowistTemp(self):
 
 
 def load():
