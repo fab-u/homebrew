@@ -88,6 +88,7 @@ class Ui_MainWindow(object):
         self.settime = QtWidgets.QTimeEdit(self.centralwidget)
         self.settime.setGeometry(QtCore.QRect(190, 160, 101, 51))
         self.settime.setObjectName("settime")
+        self.settime.valueChanged.connect(self.timeSettet)
 
         self.label_timer = QtWidgets.QLabel(self.centralwidget)
         self.label_timer.setGeometry(QtCore.QRect(190, 210, 61, 16))
@@ -249,15 +250,13 @@ class Ui_MainWindow(object):
         self.button_Step5.setStyleSheet("background-color: grey")
 
     def tempsliderMoved(self):     #sliderwert in step speichern
-       # program.steps[index].heat = self.slider_settemp.value()
-        print(self.slider_settemp.value())
+        program.steps[index].heat = self.slider_settemp.value()
 
     def speedsliderMoved(self):
         program.steps[index].speed = self.slider_setgeschw.value()
     
-   # def timeRead(self):
-      #  program.steps[index].time = self.
-
+    def timeSettet(self):
+        program.steps[index].time = self.timeEdit.time()
 
 def load():
     import sys
