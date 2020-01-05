@@ -75,9 +75,9 @@ class Ui_MainWindow(object):
         self.lcd_show_step.setGeometry(QtCore.QRect(100, 270, 101, 51))
         self.lcd_show_step.setObjectName("lcd_show_step")
 
-        self.checkbox_start_stopp = QtWidgets.QCheckBox(self.centralwidget)
-        self.checkbox_start_stopp.setGeometry(QtCore.QRect(30, 270, 71, 41))
-        self.checkbox_start_stopp.setObjectName("checkbox_start_stopp")
+        self.button_start_automatik = QtWidgets.QPushButton(self.centralwidget)
+        self.button_start_automatik.setGeometry(QtCore.QRect(10, 270, 81, 51))
+        self.button_start_automatik.setObjectName("button_start_automatik")
 
         self.line = QtWidgets.QFrame(self.centralwidget)
         self.line.setGeometry(QtCore.QRect(0, 220, 800, 21))
