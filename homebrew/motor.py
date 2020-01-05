@@ -1,6 +1,6 @@
 import RPi.GPIO as GPIO
 
-gpio = 16
+gpio = 18
 frequencie = 200 
 
 GPIO.setup(gpio, GPIO.OUT)
