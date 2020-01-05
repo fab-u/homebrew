@@ -8,7 +8,11 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-import program, motor, tempControl, tempSens, main
+import program
+import motor
+import tempControl
+import tempSens
+import main
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -19,18 +23,23 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(MainWindow.sizePolicy().hasHeightForWidth())
         MainWindow.setSizePolicy(sizePolicy)
+
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
+
         self.slider_settemp = QtWidgets.QSlider(self.centralwidget)
         self.slider_settemp.setGeometry(QtCore.QRect(150, 50, 381, 41))
         self.slider_settemp.setOrientation(QtCore.Qt.Horizontal)
         self.slider_settemp.setMaximum(100)
         self.slider_settemp.setObjectName("slider_settemp")
+        self.slider_settemp.valueChanged.connect(self.tempsliderMoved)
+
         self.slider_setgeschw = QtWidgets.QSlider(self.centralwidget)
         self.slider_setgeschw.setGeometry(QtCore.QRect(150, 100, 381, 41))
         self.slider_setgeschw.setOrientation(QtCore.Qt.Horizontal)
         self.slider_setgeschw.setMaximum(10)
         self.slider_setgeschw.setObjectName("slider_setgeschw")
+        self.slider_setgeschw.valueChanged.connect(self.speedsliderMoved)
 
         self.button_Step1 = QtWidgets.QPushButton(self.centralwidget)
         self.button_Step1.setGeometry(QtCore.QRect(240, 10, 56, 21))
@@ -183,18 +192,21 @@ class Ui_MainWindow(object):
         self.button_manuelleeinstellungen.setText(_translate("MainWindow", "Manuelle Einstellungen"))
         self.menuManuell.setTitle(_translate("MainWindow", "Automatik"))
 
-    def setstep1(self):
-        self.resetButtonColor()
+    index = 0       #schrittzähler
+    def setstep1(self):     #wenn step bearbeitet wird, buttonfarbe rot
+        self.resetButtonColor()     #alle button-farben reset
         self.button_Step1.setStyleSheet("background-color: red")
-        program.steps[1]
+        index = 0
 
     def setstep2(self):
         self.resetButtonColor()
         self.button_Step1.setStyleSheet("background-color: red")
+        index = 1
 
     def setstep3(self):
         self.resetButtonColor()
         self.button_Step1.setStyleSheet("background-color: red")
+        index = 2
 
     def setstep4(self):
         self.resetButtonColor()
@@ -216,6 +228,12 @@ class Ui_MainWindow(object):
         self.button_Step3.setStyleSheet("background-color: grey")
         self.button_Step4.setStyleSheet("background-color: grey")
         self.button_Step5.setStyleSheet("background-color: grey")
+
+    def tempsliderMoved(self):     #sliderwert in step speichern
+        program.steps[index].heat = self.slider_settemp.value()
+
+    def speedsliderMoved(self):
+        program.steps[index].speed = self.slider_setgeschw.value()
 
 def load():
     import sys
