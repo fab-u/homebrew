@@ -1,6 +1,6 @@
 import RPi.GPIO as GPIO
 
-global tempSet = 0 #Set Temperature in °C
+tempSet = 0 #Set Temperature in °C
 hysteresis = 1 #hysteresis in °C
 
 _isOn = False

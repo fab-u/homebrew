@@ -17,10 +17,10 @@ import tempSens
 import gui, gui_auto, gui_man
 
 #global variables
-global isOn = False
+isOn = False
 
 #local used variables
-global _isAuto = False
+_isAuto = False
 _loopDelayTimer = 1.0
 
 #define methods
