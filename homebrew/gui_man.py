@@ -35,6 +35,7 @@ class Ui_MainWindow(object):
         self.button_automatik = QtWidgets.QPushButton(self.centralwidget)
         self.button_automatik.setGeometry(QtCore.QRect(20, 10, 81, 21))
         self.button_automatik.setObjectName("button_automatik")
+        self.button_automatik.clicked.connect(self.setAutomatic)
 
         self.label_setgeschw = QtWidgets.QLabel(self.centralwidget)
         self.label_setgeschw.setGeometry(QtCore.QRect(90, 100, 81, 21))
