@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 import tempSens
 import tempControl
 import motor
-import main
+#import main
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'GUI_Automatik.ui'
+# Form implementation generated from reading ui file 'GUI_Automatik.ui'ß
 #
 # Created by: PyQt5 UI code generator 5.13.2
 #
@@ -12,7 +12,7 @@ import program
 import motor
 import tempControl
 import tempSens
-import main
+#import mainß
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
