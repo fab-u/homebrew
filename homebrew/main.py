@@ -4,6 +4,10 @@ import RPi.GPIO as GPIO
 #std lib
 import threading
 
+#general GPIO Settings
+GPIO.cleanup()
+GPIO.setmode(GPIO.BCM)
+
 #user lib
 import motor
 import gpio
@@ -18,10 +22,6 @@ isOn = False
 #local variables
 _isAuto = False
 _loopDelayTimer = 1.0
-
-#general GPIO Settings
-GPIO.cleanup()
-GPIO.setmode(GPIO.BCM)
 
 #define methods
 def _mainLoop():
