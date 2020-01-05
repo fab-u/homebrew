@@ -8,7 +8,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+import program, motor, tempControl, tempSens, main
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -31,21 +31,32 @@ class Ui_MainWindow(object):
         self.slider_setgeschw.setOrientation(QtCore.Qt.Horizontal)
         self.slider_setgeschw.setMaximum(10)
         self.slider_setgeschw.setObjectName("slider_setgeschw")
+
         self.button_Step1 = QtWidgets.QPushButton(self.centralwidget)
         self.button_Step1.setGeometry(QtCore.QRect(240, 10, 56, 21))
         self.button_Step1.setObjectName("button_Step1")
+        self.button_Step1.clicked.connect(self.setstep1)
+
         self.button_Step2 = QtWidgets.QPushButton(self.centralwidget)
         self.button_Step2.setGeometry(QtCore.QRect(300, 10, 56, 21))
         self.button_Step2.setObjectName("button_Step2")
+        self.button_Step2.clicked.connect(self.setstep2)
+
         self.button_Step3 = QtWidgets.QPushButton(self.centralwidget)
         self.button_Step3.setGeometry(QtCore.QRect(360, 10, 56, 21))
         self.button_Step3.setObjectName("button_Step3")
+        self.button_Step3.clicked.connect(self.setstep3)
+
         self.button_Step4 = QtWidgets.QPushButton(self.centralwidget)
         self.button_Step4.setGeometry(QtCore.QRect(420, 10, 56, 21))
         self.button_Step4.setObjectName("button_Step4")
+        self.button_Step4.clicked.connect(self.setstep4)
+
         self.button_Step5 = QtWidgets.QPushButton(self.centralwidget)
         self.button_Step5.setGeometry(QtCore.QRect(480, 10, 56, 21))
         self.button_Step5.setObjectName("button_Step5")
+        self.button_Step5.clicked.connect(self.setstep5)
+
         self.label_show_step = QtWidgets.QLabel(self.centralwidget)
         self.label_show_step.setGeometry(QtCore.QRect(100, 250, 51, 16))
         self.label_show_step.setObjectName("label_show_step")
@@ -110,22 +121,28 @@ class Ui_MainWindow(object):
         self.button_save_infobox.setObjectName("button_save_infobox")
         self.comboBox_safedbier = QtWidgets.QComboBox(self.centralwidget)
         self.comboBox_safedbier.setGeometry(QtCore.QRect(10, 60, 53, 22))
+
         self.comboBox_safedbier.setObjectName("comboBox_safedbier")
         self.comboBox_safedbier.addItem("")
         self.comboBox_safedbier.addItem("")
         self.comboBox_safedbier.addItem("")
         self.comboBox_safedbier.addItem("")
         self.comboBox_safedbier.addItem("")
+
         self.label_setinfobox = QtWidgets.QLabel(self.centralwidget)
         self.label_setinfobox.setGeometry(QtCore.QRect(570, 0, 51, 16))
         self.label_setinfobox.setObjectName("label_setinfobox")
+
         self.button_manuelleeinstellungen = QtWidgets.QPushButton(self.centralwidget)
         self.button_manuelleeinstellungen.setGeometry(QtCore.QRect(10, 10, 101, 21))
         self.button_manuelleeinstellungen.setObjectName("button_manuelleeinstellungen")
+        self.button_manuelleeinstellungen.clicked.connect(self.setMode)
+
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
+
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 18))
         self.menubar.setObjectName("menubar")
@@ -165,6 +182,40 @@ class Ui_MainWindow(object):
         self.label_setinfobox.setText(_translate("MainWindow", "set Infobox"))
         self.button_manuelleeinstellungen.setText(_translate("MainWindow", "Manuelle Einstellungen"))
         self.menuManuell.setTitle(_translate("MainWindow", "Automatik"))
+
+    def setstep1(self):
+        self.resetButtonColor()
+        self.button_Step1.setStyleSheet("background-color: red")
+        program.steps[1]
+
+    def setstep2(self):
+        self.resetButtonColor()
+        self.button_Step1.setStyleSheet("background-color: red")
+
+    def setstep3(self):
+        self.resetButtonColor()
+        self.button_Step1.setStyleSheet("background-color: red")
+
+    def setstep4(self):
+        self.resetButtonColor()
+        self.button_Step1.setStyleSheet("background-color: red")
+
+    def setstep5(self):
+        self.resetButtonColor()
+        self.button_Step1.setStyleSheet("background-color: red")
+
+    def safeSettings(self):
+        self.button_Step1.setStyleSheet("background-color: red")
+
+    def setMode(self):
+        main.setMode(False)
+
+    def resetButtonColor(self):
+        self.button_Step1.setStyleSheet("background-color: grey")
+        self.button_Step2.setStyleSheet("background-color: grey")
+        self.button_Step3.setStyleSheet("background-color: grey")
+        self.button_Step4.setStyleSheet("background-color: grey")
+        self.button_Step5.setStyleSheet("background-color: grey")
 
 def load():
     import sys
