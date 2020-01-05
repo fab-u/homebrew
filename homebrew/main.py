@@ -11,7 +11,9 @@ import gpio
 import program
 import tempControl
 import tempSens
-import gui, gui_auto, gui_man
+import gui
+import gui_auto
+import gui_man
 
 #std lib
 import threading

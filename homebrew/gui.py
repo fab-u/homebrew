@@ -1,5 +1,6 @@
 import sys
-import gui_auto, gui_man
+import gui_auto
+import gui_man
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
