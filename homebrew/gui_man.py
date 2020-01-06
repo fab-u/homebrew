@@ -112,7 +112,7 @@ class Ui_MainWindow(object):
     def setSpeed(self):
         motor.setSpeed(self.slider_setgeschw.value())
 
-    def setIstTemp(temp):
+    def setIstTemp(self, temp):
         self.lcd_showisttemp.display(temp)
 
 def load():
