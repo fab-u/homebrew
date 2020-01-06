@@ -105,7 +105,7 @@ class Ui_MainWindow(object):
 
     def setTemp(self):
         tempControl.setTemp(self.slider_settemp.value())
-        self.lcd_showsolltemp.setText(self.slider_settemp.value())
+        self.lcd_showsolltemp.display(self.slider_settemp.value())
 
     def setSpeed(self):
         motor.setSpeed(self.slider_setgeschw.value())
