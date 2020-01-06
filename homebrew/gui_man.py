@@ -113,7 +113,10 @@ class Ui_MainWindow(object):
         motor.setSpeed(self.slider_setgeschw.value())
 
     def setIstTemp(self, temp):
-        self.lcd_showisttemp.display(temp)
+        try:
+            self.lcd_showisttemp.display(temp)
+        except:
+            print("No ist Temp.")
 
 def load():
     import sys
