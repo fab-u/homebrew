@@ -112,6 +112,9 @@ class Ui_MainWindow(object):
     def setSpeed(self):
         motor.setSpeed(self.slider_setgeschw.value())
 
+    def setIstTemp(temp):
+        self.lcd_showisttemp.display(temp)
+
 def load():
     import sys
     app = QtWidgets.QApplication(sys.argv)
