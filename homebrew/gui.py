@@ -8,13 +8,13 @@ app.setStyle('Windows')
 MainWindow = QtWidgets.QMainWindow()
 
 def load(isAuto):
-    import param
+    #import param
 
     if isAuto:
         ui = gui_auto.Ui_MainWindow()
     else:
         ui = gui_man.Ui_MainWindow()
     ui.setupUi(MainWindow)
-    param.ui = ui
+    #param.ui = ui
     MainWindow.show()
     app.exec_()
