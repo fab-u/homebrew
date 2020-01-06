@@ -12,7 +12,7 @@ import program
 import motor
 import tempControl
 import tempSens
-import main
+#import main
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
