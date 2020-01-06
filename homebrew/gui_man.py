@@ -114,7 +114,7 @@ class Ui_MainWindow(object):
 
     def setIstTemp(self, temp):
         try:
-            self.lcd_showisttemp.display(temp)
+            self.lcd_showisttemp.display(10)
         except:
             print("No ist Temp.")
 
