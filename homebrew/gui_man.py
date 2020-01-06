@@ -97,8 +97,10 @@ class Ui_MainWindow(object):
         if param.isOn:
             param.isOn = False
             tempControl.off()
+            self.button_start_manuell.setText("ON")
         else:
             param.isOn = True
+            self.button_start_manuell.setText("OFF")
 
     def setAutomatic(self):
         param.setMode(True)
