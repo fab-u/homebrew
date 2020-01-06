@@ -7,6 +7,8 @@ app = QtWidgets.QApplication(sys.argv)
 app.setStyle('Windows')
 MainWindow = QtWidgets.QMainWindow()
 
+ui = gui_man.Ui_MainWindow()
+
 def load(isAuto):
     #import param
 
