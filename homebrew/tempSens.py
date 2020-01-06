@@ -15,7 +15,11 @@ def get() :
         temp_string = lines[1][pos+2:]
         temp_c = float(temp_string) / 1000.0
 
-        gui.ui.setIstTemp(temp_c)
+        #gui.ui.setIstTemp(temp_c)
+        try:
+            gui.ui.lcd_showisttemp.display(temp_c)
+        except:
+            print("errroooorr")
 
         return temp_c
     else:
