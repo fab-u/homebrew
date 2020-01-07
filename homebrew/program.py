@@ -2,6 +2,7 @@ import time
 import step
 import motor
 import tempControl
+import param
 
 steps = []
 
@@ -21,8 +22,11 @@ def start():
 def update():
   currentTime = time.time() - startTime
   if(currentTime >= steps[currentStep].time):
-    currentStep = currentStep + 1
-    _initStep(steps[currentStep])
+    if(currentStep > 4):
+      param.isOn = False
+    else:
+      currentStep = currentStep + 1
+      _initStep(steps[currentStep])
 
 def _initStep(step):
     tempControl.setTemp(step.temp)

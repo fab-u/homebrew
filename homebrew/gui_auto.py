@@ -259,12 +259,13 @@ class Ui_MainWindow(object):
 
     def tempsliderMoved(self):     #sliderwert in step speichern
         program.steps[index].heat = self.slider_settemp.value()
+        self.lcd_show_solltemp.display(self.slider_settemp.value())
 
     def speedsliderMoved(self):
         program.steps[index].speed = self.slider_setgeschw.value()
     
     def timeSettet(self):
-        time = self.timeEdit.time()
+        time = self.settime.time()
         program.steps[index].time = time
         print(type(time))
 
