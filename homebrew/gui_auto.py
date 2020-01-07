@@ -240,12 +240,12 @@ class Ui_MainWindow(object):
     def setstep4(self):
         self.resetButtonColor()
         self.button_Step4.setStyleSheet("background-color: red")
-        index = 4
+        index = 3
 
     def setstep5(self):
         self.resetButtonColor()
         self.button_Step5.setStyleSheet("background-color: red")
-        index = 5   
+        index = 4   
 
     def setMode(self):
         param.setMode(False)
