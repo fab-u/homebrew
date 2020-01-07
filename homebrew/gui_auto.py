@@ -15,6 +15,8 @@ import tempSens
 import param
 #import main
 
+index = 0
+
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -219,7 +221,7 @@ class Ui_MainWindow(object):
         self.button_manuelleeinstellungen.setText(_translate("MainWindow", "Manuelle Einstellungen"))
         self.menuManuell.setTitle(_translate("MainWindow", "Automatik"))
 
-    self.index = 0       #schrittzähler
+           #schrittzähler
     def setstep1(self):     #wenn step bearbeitet wird, buttonfarbe rot
         self.resetButtonColor()     #alle button-farben reset
         self.button_Step1.setStyleSheet("background-color: red")
