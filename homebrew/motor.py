@@ -17,3 +17,4 @@ def stop():
 #Speed from 0 to 10
 def setSpeed(speed):
     pwm.ChangeDutyCycle(speed*10)
+    print(speed)
