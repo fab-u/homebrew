@@ -270,9 +270,12 @@ class Ui_MainWindow(object):
         if param.isOn:
             self.button_start_automatik.setText("START")
             param.isOn = False
+            tempControl.setTemp(0)
+            motor.stop()
         else:
             self.button_start_automatik.setText("STOP")
             param.isOn = True
+            program.start()
 
 def load():
     import sys
