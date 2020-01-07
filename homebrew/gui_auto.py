@@ -271,7 +271,8 @@ class Ui_MainWindow(object):
     
     def timeSettet(self):
         time = self.settime.time()
-        program.steps[index].time = time
+        timeSec = QTime(0, 0, 0).secsTo(time)
+        program.steps[index].time = timeSec
         print(type(time))
 
     def startStop(self):
