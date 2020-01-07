@@ -33,6 +33,7 @@ def _mainLoop():
         tempControl.update(tempSens.get())
     else:
         tempControl.off()
+        motor.update()
 
 #initialisation script
 tempControl.init()
