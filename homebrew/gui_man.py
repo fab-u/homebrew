@@ -91,16 +91,18 @@ class Ui_MainWindow(object):
         self.label_settemp.setText(_translate("MainWindow", "Temperatur"))
         self.label_solltemp.setText(_translate("MainWindow", "Soll-temperatur"))
         self.label_isttemp.setText(_translate("MainWindow", "Ist-temperatur"))
-        self.button_start_manuell.setText(_translate("MainWindow", "Start/Stopp"))
+        self.button_start_manuell.setText(_translate("MainWindow", "ON"))
         self.menumanuell.setTitle(_translate("MainWindow", "manuell"))
 
     def start(self):
         if param.isOn:
             param.isOn = False
             tempControl.off()
+            motor.stop()
             self.button_start_manuell.setText("ON")
         else:
             param.isOn = True
+            motor.restart()
             self.button_start_manuell.setText("OFF")
 
     def setAutomatic(self):

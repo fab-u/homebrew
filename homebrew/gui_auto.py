@@ -201,7 +201,7 @@ class Ui_MainWindow(object):
         self.button_Step4.setText(_translate("MainWindow", "4"))
         self.button_Step5.setText(_translate("MainWindow", "5"))
         self.label_show_step.setText(_translate("MainWindow", "Step"))
-        self.button_start_automatik.setText(_translate("MainWindow", "Start/Stopp"))
+        self.button_start_automatik.setText(_translate("MainWindow", "START"))
         self.label_timer.setText(_translate("MainWindow", "Timer (hh/mm)"))
         self.button_save_settings.setText(_translate("MainWindow", "Save Settings"))
         self.label_step.setText(_translate("MainWindow", "step:"))
