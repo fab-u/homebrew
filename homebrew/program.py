@@ -33,6 +33,8 @@ def update():
       _initStep(steps[currentStep])
 
 def _initStep(step):
-    tempControl.tempSet = step.heat
-    motor.setSpeed(step.speed)
+  global startTime
+  startTime = time.time()
+  tempControl.tempSet = step.heat
+  motor.setSpeed(step.speed)
 
