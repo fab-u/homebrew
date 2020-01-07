@@ -23,6 +23,7 @@ def start():
 def update():
   global currentStep
   currentTime = time.time() - startTime
+  print(currentTime)
   if(currentTime >= steps[currentStep].time):
     if(currentStep > 4):
       param.isOn = False
