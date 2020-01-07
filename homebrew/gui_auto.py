@@ -78,6 +78,7 @@ class Ui_MainWindow(object):
         self.button_start_automatik = QtWidgets.QPushButton(self.centralwidget)
         self.button_start_automatik.setGeometry(QtCore.QRect(10, 270, 81, 51))
         self.button_start_automatik.setObjectName("button_start_automatik")
+        self.button_start_automatik.clicked.connect(self.startStop)
 
         self.line = QtWidgets.QFrame(self.centralwidget)
         self.line.setGeometry(QtCore.QRect(0, 220, 800, 21))
@@ -261,6 +262,14 @@ class Ui_MainWindow(object):
     
     def timeSettet(self):
         program.steps[index].time = self.timeEdit.time()
+
+    def startStop(self):
+        if param.isOn:
+            self.button_start_automatik.setText("START")
+            param.isOn = False
+        else:
+            self.button_start_automatik.setText("STOP")
+            param.isOn = True
 
 def load():
     import sys
