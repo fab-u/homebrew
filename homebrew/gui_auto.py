@@ -89,6 +89,8 @@ class Ui_MainWindow(object):
         self.settime.setGeometry(QtCore.QRect(190, 160, 101, 51))
         self.settime.setObjectName("settime")
         self.settime.valueChanged.connect(self.timeSettet)
+        self.settime.time().toString()
+        self.settime.timeChanged.connect(self.timeSettet)
 
         self.label_timer = QtWidgets.QLabel(self.centralwidget)
         self.label_timer.setGeometry(QtCore.QRect(190, 210, 61, 16))
@@ -195,7 +197,7 @@ class Ui_MainWindow(object):
         self.button_Step4.setText(_translate("MainWindow", "4"))
         self.button_Step5.setText(_translate("MainWindow", "5"))
         self.label_show_step.setText(_translate("MainWindow", "Step"))
-        self.checkbox_start_stopp.setText(_translate("MainWindow", "Start/Stopp"))
+        self.button_start_automatik.setText(_translate("MainWindow", "Start/Stopp"))
         self.label_timer.setText(_translate("MainWindow", "Timer (hh/mm)"))
         self.button_save_settings.setText(_translate("MainWindow", "Save Settings"))
         self.label_step.setText(_translate("MainWindow", "step:"))
@@ -234,13 +236,15 @@ class Ui_MainWindow(object):
     def setstep4(self):
         self.resetButtonColor()
         self.button_Step4.setStyleSheet("background-color: red")
+        index = 4
 
     def setstep5(self):
         self.resetButtonColor()
-        self.button_Step5.setStyleSheet("background-color: red")   
+        self.button_Step5.setStyleSheet("background-color: red")
+        index = 5   
 
     def setMode(self):
-        main.setMode(False)
+        param.setMode(False)
 
     def resetButtonColor(self):
         self.button_Step1.setStyleSheet("background-color: grey")
