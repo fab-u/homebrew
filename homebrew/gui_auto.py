@@ -12,6 +12,7 @@ import program
 import motor
 import tempControl
 import tempSens
+import param
 #import main
 
 class Ui_MainWindow(object):
