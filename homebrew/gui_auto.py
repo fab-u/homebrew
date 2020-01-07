@@ -219,7 +219,7 @@ class Ui_MainWindow(object):
         self.button_manuelleeinstellungen.setText(_translate("MainWindow", "Manuelle Einstellungen"))
         self.menuManuell.setTitle(_translate("MainWindow", "Automatik"))
 
-    index = 0       #schrittzähler
+    self.index = 0       #schrittzähler
     def setstep1(self):     #wenn step bearbeitet wird, buttonfarbe rot
         self.resetButtonColor()     #alle button-farben reset
         self.button_Step1.setStyleSheet("background-color: red")
