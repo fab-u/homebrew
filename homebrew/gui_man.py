@@ -24,6 +24,7 @@ class Ui_MainWindow(object):
         self.slider_setgeschw.setOrientation(QtCore.Qt.Horizontal)
         self.slider_setgeschw.setMaximum(10)
         self.slider_setgeschw.setObjectName("slider_setgeschw")
+        self.slider_setgeschw.valueChanged.connect(self.setSpeed)
 
         self.slider_settemp = QtWidgets.QSlider(self.centralwidget)
         self.slider_settemp.setGeometry(QtCore.QRect(180, 170, 381, 81))
