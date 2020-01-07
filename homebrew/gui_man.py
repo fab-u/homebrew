@@ -109,7 +109,8 @@ class Ui_MainWindow(object):
         param.setMode(True)
 
     def setTemp(self):
-        tempControl.setTemp(self.slider_settemp.value())
+        #tempControl.setTemp(self.slider_settemp.value())
+        tempControl.tempSet = self.slider_settemp.value()
         self.lcd_showsolltemp.display(self.slider_settemp.value())
 
     def setSpeed(self):
