@@ -5,6 +5,7 @@ frequencie = 200
 
 GPIO.setup(gpio, GPIO.OUT)
 pwm = GPIO.PWM(gpio, frequencie)
+pwm.start(0)
 
 #Start with speed from 0 to 10
 def start(speed):
