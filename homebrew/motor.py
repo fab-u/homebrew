@@ -26,3 +26,5 @@ def setSpeed(speed):
     _speed = speed
     if param.isOn:
         pwm.ChangeDutyCycle(speed*10)
+    
+    print("motor", speed)

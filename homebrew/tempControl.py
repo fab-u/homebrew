@@ -17,8 +17,10 @@ def setTemp(temp):
 def update(tempActual):
     if(tempActual> (tempSet + hysteresis)):
         GPIO.output(gpio, GPIO.HIGH)
+        print("heat")
     elif(tempActual> (tempSet - hysteresis)):
         GPIO.output(gpio, GPIO.LOW)
+        print("dont heat")
 
 def off():
     GPIO.output(gpio, GPIO.LOW)
