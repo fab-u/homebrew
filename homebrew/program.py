@@ -23,7 +23,7 @@ def start():
 def update():
   global currentStep
   currentTime = time.time() - startTime
-  print(currentTime)
+  print(currentTime, steps[currentStep].time)
   if(currentTime >= steps[currentStep].time):
     if(currentStep > 4):
       param.isOn = False
@@ -33,6 +33,6 @@ def update():
       _initStep(steps[currentStep])
 
 def _initStep(step):
-    tempControl.setTemp(step.temp)
+    tempControl.tempSet = step.heat
     motor.setSpeed(step.speed)
 
