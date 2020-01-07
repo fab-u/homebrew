@@ -7,7 +7,7 @@
 # WARNING! All changes made in this file will be lost!
 
 
-from PyQt5 import QtCore, QtGui, QtWidgets, QTime
+from PyQt5 import QtCore, QtGui, QtWidgets
 import program
 import motor
 import tempControl
@@ -271,7 +271,7 @@ class Ui_MainWindow(object):
     
     def timeSettet(self):
         time = self.settime.time()
-        timeSec = QTime(0, 0, 0).secsTo(time)
+        timeSec = QtCore.QTime(0, 0, 0).secsTo(time)
         program.steps[index].time = timeSec
         print(type(time))
 
