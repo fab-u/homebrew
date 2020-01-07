@@ -223,26 +223,31 @@ class Ui_MainWindow(object):
 
            #schrittzähler
     def setstep1(self):     #wenn step bearbeitet wird, buttonfarbe rot
+        global index
         self.resetButtonColor()     #alle button-farben reset
         self.button_Step1.setStyleSheet("background-color: red")
         index = 0
 
     def setstep2(self):
+        global index
         self.resetButtonColor()
         self.button_Step2.setStyleSheet("background-color: red")
         index = 1
 
     def setstep3(self):
+        global index
         self.resetButtonColor()
         self.button_Step3.setStyleSheet("background-color: red")
         index = 2
 
-    def setstep4(self):
+    def setstep4(self):        
+        global index
         self.resetButtonColor()
         self.button_Step4.setStyleSheet("background-color: red")
         index = 3
 
     def setstep5(self):
+        global index
         self.resetButtonColor()
         self.button_Step5.setStyleSheet("background-color: red")
         index = 4   
