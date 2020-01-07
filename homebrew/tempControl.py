@@ -11,6 +11,7 @@ def init():
 
 #Set Temperature 
 def setTemp(temp):
+    global tempSet
     tempSet = temp
     print("temp set", temp)
 
