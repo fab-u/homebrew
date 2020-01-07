@@ -20,10 +20,10 @@ def update(tempActual):
     try:
         if(tempActual < (tempSet - hysteresis)):
             GPIO.output(gpio, GPIO.HIGH)
-            print("heat", tempSet, tempActual)
+            print("Temp:", "Soll:", tempSet, "Ist:", tempActual, "-> Heizen")
         elif(tempActual > (tempSet + hysteresis)):
             GPIO.output(gpio, GPIO.LOW)
-            print("dont heat", tempSet, tempActual)
+            print("Temp:", "Soll:", tempSet, "Ist:", tempActual, "-> Nicht Heizen")
     except:
         print("heating error")
 
