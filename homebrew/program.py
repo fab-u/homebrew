@@ -16,14 +16,17 @@ startTime = 0
 isRunning = False
 
 def start():
+  global startTime
   startTime = time.time()
   _initStep(steps[currentStep])
 
 def update():
+  global currentStep
   currentTime = time.time() - startTime
   if(currentTime >= steps[currentStep].time):
     if(currentStep > 4):
       param.isOn = False
+      currentStep = False
     else:
       currentStep = currentStep + 1
       _initStep(steps[currentStep])
