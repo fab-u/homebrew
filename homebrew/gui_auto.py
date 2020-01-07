@@ -88,8 +88,8 @@ class Ui_MainWindow(object):
         self.settime = QtWidgets.QTimeEdit(self.centralwidget)
         self.settime.setGeometry(QtCore.QRect(190, 160, 101, 51))
         self.settime.setObjectName("settime")
-        self.settime.valueChanged.connect(self.timeSettet)
-        self.settime.time().toString()
+        #self.settime.valueChanged.connect(self.timeSettet)
+        #self.settime.time().toString()
         self.settime.timeChanged.connect(self.timeSettet)
 
         self.label_timer = QtWidgets.QLabel(self.centralwidget)
