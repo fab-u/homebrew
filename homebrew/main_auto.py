@@ -22,6 +22,8 @@ import threading
 #local used variables
 _loopDelayTimer = 2.0
 
+param.isAuto = True
+
 #define methods
 def _mainLoop():
     threading.Timer(_loopDelayTimer, _mainLoop).start()
