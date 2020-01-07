@@ -264,7 +264,9 @@ class Ui_MainWindow(object):
         program.steps[index].speed = self.slider_setgeschw.value()
     
     def timeSettet(self):
-        program.steps[index].time = self.timeEdit.time()
+        time = self.timeEdit.time()
+        program.steps[index].time = time
+        print(type(time))
 
     def startStop(self):
         if param.isOn:
