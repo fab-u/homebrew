@@ -17,11 +17,6 @@ def get() :
             temp_c = float(temp_string) / 1000.0
             #print(temp_c)
 
-            try:
-                gui.ui.lcd_showisttemp.display(temp_c)
-            except:
-                print("temp display error")
-
             return temp_c
         else:
             return 0
