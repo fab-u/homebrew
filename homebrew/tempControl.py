@@ -12,16 +12,17 @@ def init():
 #Set Temperature 
 def setTemp(temp):
     tempSet = temp
+    print("temp set", temp)
 
 #Update heat plate with current temperature values
 def update(tempActual):
     try:
         if(tempActual> (tempSet + hysteresis)):
             GPIO.output(gpio, GPIO.HIGH)
-            print("heat")
+            print("heat", tempSet, tempActual)
         elif(tempActual> (tempSet - hysteresis)):
             GPIO.output(gpio, GPIO.LOW)
-            print("dont heat")
+            print("dont heat", tempSet, tempActual)
     except:
         print("heating error")
 
